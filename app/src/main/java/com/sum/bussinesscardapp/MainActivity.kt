@@ -75,7 +75,7 @@ fun businessCard (modifier:Modifier = Modifier) {
     val offset = Offset(5.0f, 10.0f)
     Box(modifier = Modifier.fillMaxSize().background(color = Color(0xFF2F3C4F))) {
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().padding(bottom=12.dp),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         )
@@ -100,10 +100,22 @@ fun businessCard (modifier:Modifier = Modifier) {
                 Spacer(modifier = Modifier.padding(8.dp))
                 Row(modifier = Modifier.fillMaxWidth().align(Alignment.CenterHorizontally), horizontalArrangement = Arrangement.Center) {
                     Text(
-                        text = "Software Engineer",
+                        text = "Software Engineer & Lecturer",
                         textAlign = TextAlign.Center,
                         style = TextStyle(
                             fontSize = 24.sp,
+                            color=Color.White,
+                            shadow = Shadow(color = Color(0xFF506F86), offset = offset, blurRadius = 3f)
+                        )
+                    )
+                }
+                Spacer(modifier = Modifier.padding(8.dp))
+                Row(modifier = Modifier.fillMaxWidth().align(Alignment.CenterHorizontally), horizontalArrangement = Arrangement.Center) {
+                    Text(
+                        text = "National Institute of Management and Administration",
+                        textAlign = TextAlign.Center,
+                        style = TextStyle(
+                            fontSize = 18.sp,
                             color=Color.White,
                             shadow = Shadow(color = Color(0xFF506F86), offset = offset, blurRadius = 3f)
                         )
@@ -136,7 +148,7 @@ Button(onClick={
                     Text(
                         text = "+93788070101",
                         style=TextStyle(
-                            fontSize= 24.sp,
+                            fontSize= 18.sp,
                         ),
                         textAlign = TextAlign.Center
                     )
@@ -155,7 +167,7 @@ Button(onClick={
                         Text(
                             text = "github.com/kingsum007",
                             style=TextStyle(
-                                fontSize= 24.sp,
+                                fontSize= 18.sp,
                             ),
                             textAlign = TextAlign.Center
                         )
@@ -178,7 +190,7 @@ Button(onClick={
                         Text(
                             text = "sumirzai@gmail.com",
                             style=TextStyle(
-                                fontSize= 24.sp,
+                                fontSize= 18.sp,
                             ),
                             textAlign = TextAlign.Center
                         )
