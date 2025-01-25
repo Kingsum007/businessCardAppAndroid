@@ -82,7 +82,7 @@ fun businessCard (modifier:Modifier = Modifier) {
         {
             Column(modifier = Modifier.fillMaxHeight().align(Alignment.CenterVertically), verticalArrangement = Arrangement.Center) {
                 Row (modifier = Modifier.clip(CircleShape).align(Alignment.CenterHorizontally), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
-                    Image(painter = painterResource(R.drawable.safi), contentDescription = null,Modifier.size(222.dp)
+                    Image(painter = painterResource(R.drawable.safi), contentDescription = null,Modifier.size(190.dp)
                     )
                 }
                 Spacer(modifier = Modifier.padding(8.dp))
@@ -93,7 +93,7 @@ fun businessCard (modifier:Modifier = Modifier) {
                         style = TextStyle(
                             fontSize = 32.sp,
                             color = Color.White,
-                            shadow = Shadow(color = Color(0xFFFBB050), offset = offset, blurRadius = 3f)
+                            shadow = Shadow(color = Color.Black, offset = offset, blurRadius = 3f)
                         )
                     )
                 }
@@ -131,10 +131,13 @@ Button(onClick={
     }
     context.startActivity(intent)
 }){
-    Icon(Icons.Default.Phone, contentDescription = "Phone")
+    Icon(Icons.Default.Phone, contentDescription = "Phone", modifier = Modifier.size(24.dp))
     Spacer(modifier = Modifier.width(16.dp))
                     Text(
                         text = "+93788070101",
+                        style=TextStyle(
+                            fontSize= 24.sp,
+                        ),
                         textAlign = TextAlign.Center
                     )
                 }}
@@ -147,10 +150,13 @@ Button(onClick={
                 context.startActivity(intent)
             })
                     {
-                        Icon(Icons.Default.Share, contentDescription = "Share")
+                        Icon(Icons.Default.Share, contentDescription = "Share", modifier = Modifier.size(24.dp))
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             text = "github.com/kingsum007",
+                            style=TextStyle(
+                                fontSize= 24.sp,
+                            ),
                             textAlign = TextAlign.Center
                         )
                     }
@@ -167,10 +173,13 @@ Button(onClick={
                         context.startActivity(intent)
                     }) {
 
-                        Icon(Icons.Default.Email, contentDescription = "Email")
+                        Icon(Icons.Default.Email, contentDescription = "Email", modifier = Modifier.size(24.dp))
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             text = "sumirzai@gmail.com",
+                            style=TextStyle(
+                                fontSize= 24.sp,
+                            ),
                             textAlign = TextAlign.Center
                         )
                     }
