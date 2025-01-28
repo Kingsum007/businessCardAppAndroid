@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.sum.bussinesscardapp"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -40,7 +40,16 @@ android {
 }
 
 dependencies {
+// Required dependency for both Material 2 and Material 3 buttons
+    implementation("com.github.t3chkid.branded-buttons-compose:branded-buttons-core:1.0.1")
 
+    // Dependency for Material 2 buttons
+    implementation("com.github.t3chkid.branded-buttons-compose:branded-buttons-compose-m2:1.0.1")
+
+    // Dependency for Material 3 buttons
+    implementation("com.github.t3chkid.branded-buttons-compose:branded-buttons-compose-m3:1.0.1")
+    implementation ("androidx.compose.material:material-icons-extended:1.5.4")
+    implementation ("com.github.Gurupreet:FontAwesomeCompose:1.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
